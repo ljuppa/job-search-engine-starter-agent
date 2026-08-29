@@ -40,11 +40,26 @@ Deterministic services own hard constraints, ranking, deduplication, workflow st
 
 ## Getting started
 
+Prerequisite: install and start Docker Desktop (Docker Compose v2). The development
+services run in containers, so Python and Node.js do not need to be installed on the host.
+
 ```bash
 cp .env.example .env
 make setup
 make dev
 ```
+
+Verify the scaffold is running:
+
+```bash
+curl http://localhost:8000/health
+open http://localhost:3000
+make test
+make lint
+```
+
+`make stop` stops the services. `make clean` also removes the local PostgreSQL volume.
+Database migrations are introduced after M1, once the domain contracts are stable.
 
 Then open the repository in VS Code with the Codex extension enabled.
 

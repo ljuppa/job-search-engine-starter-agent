@@ -6,6 +6,8 @@ Docker Compose, backend/frontend scaffolds, GitHub Actions, README, AGENTS.md, d
 ## M1 — Domain contracts
 CandidateProfile, Evidence, ProfileChangeProposal, RawJob, Job, JobProfile, Assessment, Recommendation, Feedback and ExecutionContext schemas.
 
+Detailed scope and status: [M1 domain-contracts backlog](../backlog/m1-domain-contracts.md).
+
 ## M2 — LLM Gateway
 Provider-neutral gateway, capability/model registry, OpenAI adapter, retries, structured output, telemetry and unit tests.
 

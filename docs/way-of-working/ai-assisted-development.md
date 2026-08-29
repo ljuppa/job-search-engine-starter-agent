@@ -29,8 +29,11 @@ Start on the other:
 ```bash
 git pull
 make dev
-make migrate
 ```
+
+Database migrations begin after M1, once domain contracts are stable. After the
+persistence milestone,
+run the documented migration command before starting work against an existing local database.
 
 ## AI interaction modes
 

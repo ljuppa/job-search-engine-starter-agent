@@ -1,5 +1,18 @@
+import signal
+from threading import Event
+
+
 def main() -> None:
-    print("Scheduler scaffold ready. Scheduling implementation is a later milestone.")
+    """Keep the scheduler alive until the M8 scheduler replaces this scaffold."""
+    stop_event = Event()
+
+    def stop(*_: object) -> None:
+        stop_event.set()
+
+    signal.signal(signal.SIGINT, stop)
+    signal.signal(signal.SIGTERM, stop)
+    print("Scheduler scaffold running", flush=True)
+    stop_event.wait()
 
 
 if __name__ == "__main__":

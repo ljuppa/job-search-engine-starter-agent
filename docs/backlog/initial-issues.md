@@ -2,6 +2,10 @@
 
 Create these issues in roughly this order.
 
+This is the original high-level issue seed. Use the [delivery backlog](README.md)
+for current milestone status and detailed, reviewable stories. M1 is decomposed in
+[M1 domain contracts](m1-domain-contracts.md).
+
 ## #1 Development environment baseline
 Docker Compose starts PostgreSQL, backend, worker, scheduler and frontend; `/health` responds; README setup works on both Macs.
 
