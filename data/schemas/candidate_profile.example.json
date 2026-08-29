@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "profile-example",
+  "user_id": "user-example",
+  "version": 1,
+  "status": "ACTIVE",
+  "summary": "Example only",
+  "career_history": [],
+  "capabilities": [],
+  "achievements": [],
+  "target_roles": [],
+  "acceptable_roles": [],
+  "excluded_roles": [],
+  "hard_constraints": [],
+  "soft_preferences": [],
+  "career_goals": [],
+  "strengths": [],
+  "gaps": [],
+  "location_preferences": {},
+  "compensation_preferences": {},
+  "work_model_preferences": {},
+  "confidence_map": {}
+}

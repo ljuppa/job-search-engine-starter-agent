@@ -1,0 +1,37 @@
+{
+  "product": {
+    "name": "Personal Job Search Engine",
+    "version": "0.1",
+    "mode": "single-user behavior, multi-user-safe ownership"
+  },
+  "agents": [
+    "profiler",
+    "scout",
+    "analyst",
+    "matcher",
+    "strategist"
+  ],
+  "deterministic_services": [
+    "ranking",
+    "hard_constraints",
+    "deduplication",
+    "workflow_orchestration"
+  ],
+  "stack": {
+    "backend": "Python/FastAPI",
+    "frontend": "Next.js/React/TypeScript",
+    "database": "PostgreSQL",
+    "contracts": "Pydantic",
+    "orm": "SQLAlchemy",
+    "migrations": "Alembic",
+    "llm_gateway": "provider-neutral",
+    "initial_llm_provider": "OpenAI",
+    "containers": "Docker Compose",
+    "ci_cd": "GitHub Actions"
+  },
+  "primary_metrics": [
+    "Precision@5",
+    "Unsupported Claim Rate",
+    "User Acceptance Rate"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "correlation_id": "corr-example",
+  "user_id": "user-example",
+  "workflow_run_id": "workflow-example",
+  "profile_version": 1,
+  "job_id": "job-example",
+  "trace_id": "trace-example"
+}

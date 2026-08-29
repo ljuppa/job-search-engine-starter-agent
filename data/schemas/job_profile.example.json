@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "job_profile_id": "jp-example",
+  "job_id": "job-example",
+  "version": 1,
+  "role_family": "Engineering Leadership",
+  "seniority": "Director",
+  "leadership_scope": {},
+  "leader_of_leaders": true,
+  "responsibilities": [],
+  "must_have_requirements": [],
+  "nice_to_have_requirements": [],
+  "technical_expectations": [],
+  "domain": null,
+  "industry": null,
+  "work_model": null,
+  "location": {},
+  "compensation": {},
+  "unknown_fields": [],
+  "confidence_map": {}
+}
