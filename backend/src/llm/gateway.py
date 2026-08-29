@@ -1,4 +1,5 @@
 from typing import Any, Protocol, TypeVar
+
 from pydantic import BaseModel
 
 T = TypeVar("T", bound=BaseModel)

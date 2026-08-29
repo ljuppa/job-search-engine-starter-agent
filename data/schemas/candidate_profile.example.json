@@ -1,9 +1,10 @@
 {
   "schema_version": "1.0",
-  "profile_id": "profile-example",
-  "user_id": "user-example",
-  "version": 1,
-  "status": "ACTIVE",
+  "profile_id": "55b8b13c-3e12-4ce7-ab9b-132bb312a8f1",
+  "user_id": "59ffbf11-661f-4c3e-b6d1-fd72d4f10a55",
+  "revision": 1,
+  "profile_status": "CONFIRMED",
+  "search_posture": "SELECTIVE",
   "summary": "Example only",
   "career_history": [],
   "capabilities": [],
@@ -16,8 +17,17 @@
   "career_goals": [],
   "strengths": [],
   "gaps": [],
-  "location_preferences": {},
-  "compensation_preferences": {},
-  "work_model_preferences": {},
+  "location_preferences": {
+    "preferred_locations": [],
+    "relocation_allowed": null
+  },
+  "compensation_preferences": {
+    "currency": null,
+    "minimum_annual_amount": null,
+    "target_annual_amount": null
+  },
+  "work_model_preferences": {
+    "acceptable_models": []
+  },
   "confidence_map": {}
 }

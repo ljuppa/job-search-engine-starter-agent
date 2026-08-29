@@ -1,4 +1,4 @@
-.PHONY: setup dev stop test eval lint migrate seed clean
+.PHONY: setup dev stop test eval lint seed clean
 
 setup:
 	docker compose build
@@ -11,16 +11,13 @@ stop:
 	docker compose down
 
 test:
-	docker compose run --rm backend pytest -q
+	docker compose run --build --rm backend pytest -q
 
 eval:
-	docker compose run --rm backend python -m evals.runner
+	docker compose run --build --rm backend python -m evals.runner
 
 lint:
-	docker compose run --rm backend ruff check .
-
-migrate:
-	docker compose run --rm backend alembic upgrade head
+	docker compose run --build --rm backend ruff check .
 
 seed:
 	@echo "Seed command will be implemented with persistence milestone."
