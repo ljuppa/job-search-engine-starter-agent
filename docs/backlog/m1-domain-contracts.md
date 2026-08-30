@@ -115,7 +115,7 @@ feedback captured against the exact profile and job information used.
 
 ### M1-06 — Model execution context and public exports
 
-**Status:** Not started  
+**Status:** Done
 **Depends on:** M1-01, M1-05
 
 **User story:** As a workflow developer, I want a typed execution context and a

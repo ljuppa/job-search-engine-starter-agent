@@ -23,6 +23,7 @@ from .decision import (
     RecommendationClassification,
     UserFeedback,
 )
+from .execution import ExecutionContext, ExecutionScope
 from .job import Job, JobCompensation, JobProfile, RawJob
 from .profile import (
     CandidateProfile,
@@ -50,6 +51,8 @@ __all__ = [
     "EvidenceId",
     "EvidenceReference",
     "EvidenceSourceType",
+    "ExecutionContext",
+    "ExecutionScope",
     "FeedbackAction",
     "Job",
     "JobCompensation",
