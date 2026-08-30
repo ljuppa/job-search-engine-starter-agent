@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "e0000000-0000-4000-8000-000000000001",
+  "user_id": "e0000000-0000-4000-8000-000000000002",
+  "source_type": "CV",
+  "source_reference": "cv:synthetic-2026-08-30",
+  "captured_claim": "Led a 30-person engineering group.",
+  "confidence": 0.95,
+  "captured_at": "2026-08-30T10:00:00Z"
+}

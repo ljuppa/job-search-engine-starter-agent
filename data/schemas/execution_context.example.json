@@ -1,8 +1,11 @@
 {
-  "correlation_id": "corr-example",
-  "user_id": "user-example",
-  "workflow_run_id": "workflow-example",
-  "profile_version": 1,
-  "job_id": "job-example",
-  "trace_id": "trace-example"
+  "schema_version": "1.0",
+  "correlation_id": "c0000000-0000-4000-8000-000000000001",
+  "trace_id": "c0000000-0000-4000-8000-000000000002",
+  "workflow_run_id": "c0000000-0000-4000-8000-000000000003",
+  "scope": "USER",
+  "user_id": "c0000000-0000-4000-8000-000000000004",
+  "candidate_profile_id": "c0000000-0000-4000-8000-000000000005",
+  "candidate_profile_revision": 1,
+  "job_id": "c0000000-0000-4000-8000-000000000006"
 }

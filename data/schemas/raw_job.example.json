@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "raw_job_id": "a1000000-0000-4000-8000-000000000001",
+  "source_name": "Synthetic ATS",
+  "external_id": "engineering-director-001",
+  "source_url": "https://jobs.example.test/engineering-director-001",
+  "retrieved_at": "2026-08-30T10:00:00Z",
+  "published_at": "2026-08-29T10:00:00Z",
+  "updated_at": null,
+  "title": "Engineering Director",
+  "company_name": "Example Systems",
+  "location": "Eindhoven, Netherlands",
+  "description": "Lead a software engineering organisation.",
+  "source_payload": {"id": "engineering-director-001"},
+  "content_hash": "sha256:synthetic"
+}

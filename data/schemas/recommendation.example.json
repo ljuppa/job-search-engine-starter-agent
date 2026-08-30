@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "recommendation_id": "a3000000-0000-4000-8000-000000000001",
+  "user_id": "a3000000-0000-4000-8000-000000000002",
+  "job_id": "a2000000-0000-4000-8000-000000000001",
+  "candidate_profile_id": "a3000000-0000-4000-8000-000000000003",
+  "candidate_profile_revision": 1,
+  "job_profile_id": "d0000000-0000-4000-8000-000000000001",
+  "job_profile_revision": 1,
+  "assessment_ids": ["b0000000-0000-4000-8000-000000000001"],
+  "final_score": 84,
+  "rank": 1,
+  "classification": "PRIORITY",
+  "explanation": "Strong fit for engineering leadership and career direction.",
+  "ranking_version": "1.0",
+  "created_at": "2026-08-30T10:00:00Z"
+}

@@ -83,7 +83,7 @@ evidence rather than silently treated as facts.
 
 ### M1-04 — Model global job intelligence
 
-**Status:** Not started  
+**Status:** Done
 **Depends on:** M1-01
 
 **User story:** As the job-intelligence system, I want raw postings, canonical jobs,
@@ -99,7 +99,7 @@ and derived job profiles distinguished so shared source data can be reused safel
 
 ### M1-05 — Model user-specific decisions
 
-**Status:** Not started  
+**Status:** Done
 **Depends on:** M1-01, M1-02, M1-04
 
 **User story:** As a candidate, I want fit, career value, recommendations, and my
@@ -115,7 +115,7 @@ feedback captured against the exact profile and job information used.
 
 ### M1-06 — Model execution context and public exports
 
-**Status:** Not started  
+**Status:** Done
 **Depends on:** M1-01, M1-05
 
 **User story:** As a workflow developer, I want a typed execution context and a
@@ -131,7 +131,7 @@ stable import surface so every agent run is attributable and easy to integrate.
 
 ### M1-07 — Align examples and generated schemas
 
-**Status:** Not started  
+**Status:** Done
 **Depends on:** M1-02, M1-03, M1-04, M1-05, M1-06
 
 **User story:** As a developer and evaluator, I want realistic validated examples
@@ -146,7 +146,7 @@ so I can understand each contract and build reliable tests from it.
 
 ### M1-08 — Prove the contract boundary
 
-**Status:** Not started  
+**Status:** Done
 **Depends on:** M1-01 through M1-07
 
 **User story:** As a maintainer, I want automated proof that contracts remain
