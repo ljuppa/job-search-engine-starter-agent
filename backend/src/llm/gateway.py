@@ -1,6 +1,9 @@
-from typing import Any, Protocol, TypeVar
+from typing import Protocol, TypeVar
 
 from pydantic import BaseModel
+
+from .contracts import LLMRequest, LLMResponse, ProviderUnavailableError
+from .registry import ModelDefinition, ModelRegistry
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -9,11 +12,10 @@ class LLMProvider(Protocol):
     async def generate_structured(
         self,
         *,
-        messages: list[dict[str, str]],
+        request: LLMRequest,
         response_model: type[T],
-        model: str,
-        metadata: dict[str, Any] | None = None,
-    ) -> T: ...
+        model: ModelDefinition,
+    ) -> LLMResponse[T]: ...
 
 
 class LLMGateway:
@@ -23,21 +25,22 @@ class LLMGateway:
     Routing, telemetry, retries and provider capabilities will be implemented here.
     """
 
-    def __init__(self, providers: dict[str, LLMProvider]) -> None:
+    def __init__(self, *, registry: ModelRegistry, providers: dict[str, LLMProvider]) -> None:
+        self._registry = registry
         self._providers = providers
 
     async def generate_structured(
         self,
         *,
-        provider: str,
-        model: str,
-        messages: list[dict[str, str]],
+        request: LLMRequest,
         response_model: type[T],
-        metadata: dict[str, Any] | None = None,
-    ) -> T:
-        return await self._providers[provider].generate_structured(
-            messages=messages,
+    ) -> LLMResponse[T]:
+        model = self._registry.resolve(request)
+        provider = self._providers.get(model.provider)
+        if provider is None:
+            raise ProviderUnavailableError(f"provider is not configured: {model.provider}")
+        return await provider.generate_structured(
+            request=request,
             response_model=response_model,
             model=model,
-            metadata=metadata,
         )

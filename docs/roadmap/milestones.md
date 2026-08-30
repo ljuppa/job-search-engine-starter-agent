@@ -11,6 +11,8 @@ Detailed scope and status: [M1 domain-contracts backlog](../backlog/m1-domain-co
 ## M2 — LLM Gateway
 Provider-neutral gateway, capability/model registry, OpenAI adapter, retries, structured output, telemetry and unit tests.
 
+Detailed scope and status: [M2 LLM Gateway backlog](../backlog/m2-llm-gateway.md).
+
 ## M3 — Profiler
 Adaptive profile extraction/conversation, proposal/confirmation model, persistence and Profiler evals.
 
