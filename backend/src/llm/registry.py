@@ -41,3 +41,19 @@ class ModelRegistry:
                 f"model key {request.model_key} lacks required capabilities: {missing}"
             )
         return definition
+
+
+DEFAULT_MODEL_DEFINITIONS = (
+    ModelDefinition(
+        key="openai-structured-default",
+        provider="openai",
+        provider_model="gpt-5.6-luna",
+        capabilities=frozenset({ModelCapability.STRUCTURED_OUTPUT}),
+    ),
+)
+
+
+def default_model_registry() -> ModelRegistry:
+    """Build the initial version-controlled model registry."""
+
+    return ModelRegistry(DEFAULT_MODEL_DEFINITIONS)

@@ -21,10 +21,10 @@ typed requests, structured responses, capability routing and normalised errors.
 
 ### M2-02 — OpenAI adapter
 
-**Status:** Not started
+**Status:** Done
 
-Implement the first provider adapter with the selected OpenAI model, structured
-output mapping, normalised errors and mocked tests.
+Implement the first provider adapter with `gpt-5.6-luna`, strict structured
+output mapping, `store=False`, normalised errors and mocked tests.
 
 ### M2-03 — Retry, timeout and telemetry policy
 

@@ -10,12 +10,13 @@ from .contracts import (
     MessageRole,
     ModelCapability,
     ModelNotFoundError,
+    ProviderRequestError,
     ProviderUnavailableError,
     RateLimitedError,
     StructuredOutputError,
 )
 from .gateway import LLMGateway, LLMProvider
-from .registry import ModelDefinition, ModelRegistry
+from .registry import ModelDefinition, ModelRegistry, default_model_registry
 
 __all__ = [
     "CapabilityUnavailableError",
@@ -31,7 +32,9 @@ __all__ = [
     "ModelDefinition",
     "ModelNotFoundError",
     "ModelRegistry",
+    "ProviderRequestError",
     "ProviderUnavailableError",
     "RateLimitedError",
     "StructuredOutputError",
+    "default_model_registry",
 ]

@@ -80,6 +80,10 @@ class ProviderUnavailableError(LLMGatewayError):
     retryable = True
 
 
+class ProviderRequestError(LLMGatewayError):
+    code = "PROVIDER_REQUEST_ERROR"
+
+
 class RateLimitedError(LLMGatewayError):
     code = "RATE_LIMITED"
     retryable = True
