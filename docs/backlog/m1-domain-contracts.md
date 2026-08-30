@@ -83,7 +83,7 @@ evidence rather than silently treated as facts.
 
 ### M1-04 — Model global job intelligence
 
-**Status:** Not started  
+**Status:** Done
 **Depends on:** M1-01
 
 **User story:** As the job-intelligence system, I want raw postings, canonical jobs,
@@ -99,7 +99,7 @@ and derived job profiles distinguished so shared source data can be reused safel
 
 ### M1-05 — Model user-specific decisions
 
-**Status:** Not started  
+**Status:** Done
 **Depends on:** M1-01, M1-02, M1-04
 
 **User story:** As a candidate, I want fit, career value, recommendations, and my

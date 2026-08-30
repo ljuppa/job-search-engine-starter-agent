@@ -14,6 +14,16 @@ from .common import (
     UtcTimestamp,
     VersionedContract,
 )
+from .decision import (
+    Assessment,
+    AssessmentScore,
+    AssessmentType,
+    FeedbackAction,
+    Recommendation,
+    RecommendationClassification,
+    UserFeedback,
+)
+from .job import Job, JobCompensation, JobProfile, RawJob
 from .profile import (
     CandidateProfile,
     CompensationPreferences,
@@ -30,6 +40,9 @@ from .proposal import ProfileChangeProposal, ProposalOperation, ProposalStatus
 
 __all__ = [
     "CONTRACT_SCHEMA_VERSION",
+    "Assessment",
+    "AssessmentScore",
+    "AssessmentType",
     "CandidateProfile",
     "CompensationPreferences",
     "ConfidenceScore",
@@ -37,6 +50,10 @@ __all__ = [
     "EvidenceId",
     "EvidenceReference",
     "EvidenceSourceType",
+    "FeedbackAction",
+    "Job",
+    "JobCompensation",
+    "JobProfile",
     "LocationPreferences",
     "PositiveRevision",
     "ProfileChangeProposal",
@@ -44,9 +61,13 @@ __all__ = [
     "ProfileStatus",
     "ProposalOperation",
     "ProposalStatus",
+    "RawJob",
+    "Recommendation",
+    "RecommendationClassification",
     "SchemaVersion",
     "SearchPosture",
     "StableId",
+    "UserFeedback",
     "UserId",
     "UserScopedContract",
     "UserScopedVersionedContract",
