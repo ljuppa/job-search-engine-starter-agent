@@ -16,7 +16,9 @@ from .contracts import (
     StructuredOutputError,
 )
 from .gateway import LLMGateway, LLMProvider
+from .policy import RetryPolicy
 from .registry import ModelDefinition, ModelRegistry, default_model_registry
+from .telemetry import LLMTelemetryEvent, LLMTelemetrySink, TelemetryOutcome
 
 __all__ = [
     "CapabilityUnavailableError",
@@ -26,6 +28,8 @@ __all__ = [
     "LLMProvider",
     "LLMRequest",
     "LLMResponse",
+    "LLMTelemetryEvent",
+    "LLMTelemetrySink",
     "LLMUsage",
     "MessageRole",
     "ModelCapability",
@@ -35,6 +39,8 @@ __all__ = [
     "ProviderRequestError",
     "ProviderUnavailableError",
     "RateLimitedError",
+    "RetryPolicy",
     "StructuredOutputError",
+    "TelemetryOutcome",
     "default_model_registry",
 ]

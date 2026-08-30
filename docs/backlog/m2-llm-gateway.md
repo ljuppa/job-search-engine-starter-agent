@@ -28,10 +28,11 @@ output mapping, `store=False`, normalised errors and mocked tests.
 
 ### M2-03 — Retry, timeout and telemetry policy
 
-**Status:** Not started
+**Status:** Done
 
-Add explicit retry/timeout policy, latency and usage emission, and model-routing
-metadata. No retryable provider call may bypass this policy.
+Three attempts use a 30-second per-attempt timeout and exponential backoff from
+250 ms with jitter, capped at two seconds. Only normalised retryable errors are
+retried. Typed telemetry is emitted through an injected sink.
 
 ## Explicitly out of scope
 
