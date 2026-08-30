@@ -131,7 +131,7 @@ stable import surface so every agent run is attributable and easy to integrate.
 
 ### M1-07 — Align examples and generated schemas
 
-**Status:** Not started  
+**Status:** Done
 **Depends on:** M1-02, M1-03, M1-04, M1-05, M1-06
 
 **User story:** As a developer and evaluator, I want realistic validated examples

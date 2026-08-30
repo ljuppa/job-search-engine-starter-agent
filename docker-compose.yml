@@ -22,6 +22,7 @@ services:
     volumes:
       - ./backend:/app
       - ./evals:/app/evals
+      - ./data:/app/data:ro
     ports:
       - "8000:8000"
     depends_on:

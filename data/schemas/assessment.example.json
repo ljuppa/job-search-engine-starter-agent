@@ -1,16 +1,19 @@
 {
   "schema_version": "1.0",
-  "assessment_id": "assessment-example",
-  "user_id": "user-example",
-  "job_id": "job-example",
-  "profile_version": 1,
-  "job_profile_version": 1,
+  "assessment_id": "b0000000-0000-4000-8000-000000000001",
+  "user_id": "b0000000-0000-4000-8000-000000000002",
+  "job_id": "b0000000-0000-4000-8000-000000000003",
+  "candidate_profile_id": "b0000000-0000-4000-8000-000000000004",
+  "candidate_profile_revision": 1,
+  "job_profile_id": "b0000000-0000-4000-8000-000000000005",
+  "job_profile_revision": 1,
   "assessment_type": "FIT",
   "score": 84,
   "confidence": 0.87,
   "strengths": [],
   "risks": [],
   "gaps": [],
-  "evidence": [],
-  "agent_run_id": "run-example"
+  "evidence_references": [],
+  "agent_run_id": "b0000000-0000-4000-8000-000000000006",
+  "assessed_at": "2026-08-30T10:00:00Z"
 }
