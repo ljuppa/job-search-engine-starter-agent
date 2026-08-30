@@ -146,7 +146,7 @@ so I can understand each contract and build reliable tests from it.
 
 ### M1-08 — Prove the contract boundary
 
-**Status:** Not started  
+**Status:** Done
 **Depends on:** M1-01 through M1-07
 
 **User story:** As a maintainer, I want automated proof that contracts remain
