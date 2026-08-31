@@ -7,9 +7,9 @@ backlog before implementation begins. A story moves through `Not started`,
 | Milestone | Status | Scope | Backlog |
 |---|---|---|---|
 | M0 — Development environment | Done | Local services, CI, documentation and developer commands | [Initial issues](initial-issues.md) |
-| M1 — Domain contracts | In progress | Versioned Pydantic contracts, examples and contract tests | [M1 domain contracts](m1-domain-contracts.md) |
-| M2 — LLM Gateway | Not started | Gateway, provider adapter and telemetry | To be planned before work begins |
-| M3 — Profiler | Not started | Profile extraction, proposals and profiler evals | To be planned before work begins |
+| M1 — Domain contracts | Done | Versioned Pydantic contracts, examples and contract tests | [M1 domain contracts](m1-domain-contracts.md) |
+| M2 — LLM Gateway | Done | Gateway, provider adapter and telemetry | [M2 LLM Gateway](m2-llm-gateway.md) |
+| M3 — Profiler | In progress | Profile extraction, proposals and profiler evals | [M3 Profiler](m3-profiler.md) |
 | M4 — Analyst | Not started | Raw-job normalization and analyst evals | To be planned before work begins |
 | M5 — Matcher | Not started | Fit assessment and deterministic constraints | To be planned before work begins |
 | M6 — Strategist | Not started | Career assessment | To be planned before work begins |
