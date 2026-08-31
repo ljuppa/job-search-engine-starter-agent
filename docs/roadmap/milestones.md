@@ -16,6 +16,8 @@ Detailed scope and status: [M2 LLM Gateway backlog](../backlog/m2-llm-gateway.md
 ## M3 — Profiler
 Adaptive profile extraction/conversation, proposal/confirmation model, persistence and Profiler evals.
 
+Detailed scope and status: [M3 Profiler backlog](../backlog/m3-profiler.md).
+
 ## M4 — Analyst
 Frozen RawJob → JobProfile pipeline and Analyst evals.
 
