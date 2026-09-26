@@ -27,28 +27,28 @@ application code will later convert drafts into canonical pending proposals.
 
 ### M3-02 — Profile persistence primitives
 
-**Status:** Not started
+**Status:** Done
 
 Add SQLAlchemy and Alembic infrastructure plus repositories and migrations for
 candidate profiles, profile evidence and profile change proposals.
 
 ### M3-03 — Deterministic Profiler application service
 
-**Status:** Not started
+**Status:** Done
 
 Convert Profiler output into a draft profile, canonical evidence and pending
 proposals. Confirmed constraints and preferences must never be mutated directly.
 
 ### M3-04 — Profiler synthetic eval set and runner
 
-**Status:** Not started
+**Status:** Done
 
 Add versioned cases for fact extraction, hard-constraint recall, provenance and
 inference discipline, exercised through a reusable deterministic eval runner.
 
 ### M3-05 — OpenAI-backed structured extraction
 
-**Status:** Not started
+**Status:** Done
 
 Use the M2 `LLMGateway` and logical model registry key to run structured initial
 profile extraction against frozen Profiler cases. No Profiler code imports a
@@ -56,7 +56,7 @@ provider SDK.
 
 ### M3-06 — Follow-up questions and profile confirmation
 
-**Status:** Not started
+**Status:** Done
 
 Use deterministic policy to select missing hard-constraint questions. Explicit
 answers and accepted proposals create a new profile revision; they do not mutate
@@ -64,7 +64,7 @@ an existing revision.
 
 ### M3-07 — Milestone review
 
-**Status:** Not started
+**Status:** Done
 
 Run tests and evals, review architecture boundaries and update the relevant
 documentation before merge.

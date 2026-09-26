@@ -1,0 +1,6 @@
+{
+  "case_id": "declared-location-v1",
+  "expected_fact_paths": ["/location_preferences/preferred_locations"],
+  "required_source_ids": ["22222222-2222-4222-8222-222222222222"],
+  "forbidden_inferred_paths": ["/location_preferences/relocation_allowed"]
+}

@@ -1,11 +1,10 @@
 # Evals
 
-This directory will contain versioned golden datasets, test cases and the eval runner. Evals must use the same domain contracts and agent execution layer as production.
+Evals use production contracts while keeping expected behaviour versioned and deterministic.
 
-Initial folders:
+## Profiler cases
 
-- `datasets/synthetic/`
-- `datasets/frozen_jobs/`
-- `datasets/user_labeled/`
-- `cases/`
-- `runner/`
+`cases/profiler/` contains frozen synthetic cases. The M3 runner checks that
+required facts are present, source IDs provide provenance, and forbidden
+inferences are not returned. Gateway-backed extraction is exercised with fakes
+in tests; live-provider evals are deliberately opt-in and require credentials.

@@ -12,9 +12,12 @@ from .contracts import (
     ProfilerResult,
     ProfilerSource,
 )
+from .extraction import LLMGatewayProfilerExtractor
+from .service import ProfilerService
 
 __all__ = [
     "FactDisposition",
+    "LLMGatewayProfilerExtractor",
     "ProfileChangeDraft",
     "ProfileFact",
     "ProfilerInput",
@@ -23,5 +26,6 @@ __all__ = [
     "ProfilerQuestionOption",
     "ProfilerQuestionTopic",
     "ProfilerResult",
+    "ProfilerService",
     "ProfilerSource",
 ]

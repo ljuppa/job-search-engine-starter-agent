@@ -70,3 +70,14 @@ Actions: `INTERESTED`, `MAYBE`, `IGNORE`, `APPLIED`, `NOT_RELEVANT`, `NEVER_SHOW
 ## Versioning rule
 
 Never rely on an unversioned singleton profile. Assessments reference the exact profile and job-profile versions used.
+
+## M3 persistence implementation
+
+Candidate profiles are persisted as immutable PostgreSQL JSONB snapshots keyed
+by `(profile_id, revision)`. User ID and status remain relational metadata for
+safe filtering. Evidence and change proposals have separate user-scoped tables
+and reference the exact profile revision they support or propose changing.
+
+Accepting a proposal creates a new profile revision. The prior snapshot remains
+unchanged, and the proposal is marked `USER_ACCEPTED`; no confirmed profile is
+updated in place.
