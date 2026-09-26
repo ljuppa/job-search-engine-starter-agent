@@ -1,0 +1,23 @@
+{
+  "jobs": [
+    {
+      "id": 101,
+      "title": "Engineering Manager",
+      "absolute_url": "https://boards.greenhouse.io/example/jobs/101",
+      "content": "<p>Lead a product engineering team.</p>",
+      "location": {"name": "Amsterdam, Netherlands"},
+      "first_published": "2026-09-01T09:00:00Z",
+      "updated_at": "2026-09-15T10:30:00Z",
+      "departments": [{"name": "Engineering"}]
+    },
+    {
+      "id": 102,
+      "title": "Data Engineer",
+      "absolute_url": "https://boards.greenhouse.io/example/jobs/102",
+      "content": "<p>Build reliable data products.</p>",
+      "location": {"name": "Remote, Netherlands"},
+      "first_published": "2026-09-02T09:00:00Z",
+      "updated_at": "2026-09-16T10:30:00Z"
+    }
+  ]
+}

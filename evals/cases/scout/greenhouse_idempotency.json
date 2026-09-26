@@ -1,0 +1,8 @@
+{
+  "case_id": "greenhouse-idempotency-v1",
+  "source_name": "greenhouse",
+  "fixture": "frozen_jobs/greenhouse/public_board_jobs.json",
+  "expected_item_count": 2,
+  "expected_external_ids": ["101", "102"],
+  "replay_is_idempotent": true
+}

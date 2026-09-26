@@ -23,3 +23,21 @@ def test_repository_persists_global_job_analysis_with_sequential_revisions() -> 
 
     assert profile.revision == 1
     assert repository.next_job_profile_revision(job.job_id) == 2
+
+
+def test_raw_job_source_revisions_are_idempotent_by_source_identity_and_content() -> None:
+    engine = create_engine("sqlite+pysqlite:///:memory:")
+    Base.metadata.create_all(engine)
+    repository = JobRepository(sessionmaker(bind=engine, expire_on_commit=False))
+    original = RawJob(
+        raw_job_id=uuid4(), source_name="greenhouse", external_id="1",
+        source_url="https://example.com/jobs/1", retrieved_at=datetime.now(UTC),
+        title="Engineer", company_name="Example", description="Build software",
+        source_payload={}, content_hash="hash-one",
+    )
+    replay = original.model_copy(update={"raw_job_id": uuid4()})
+    changed = original.model_copy(update={"raw_job_id": uuid4(), "content_hash": "hash-two"})
+
+    assert repository.save_raw_job(original).raw_job_id == original.raw_job_id
+    assert repository.save_raw_job(replay).raw_job_id == original.raw_job_id
+    assert repository.save_raw_job(changed).raw_job_id == changed.raw_job_id

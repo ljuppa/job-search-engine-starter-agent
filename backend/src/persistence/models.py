@@ -75,6 +75,11 @@ class ProfileChangeProposalRecord(Base):
 
 class RawJobRecord(Base):
     __tablename__ = "raw_jobs"
+    __table_args__ = (
+        UniqueConstraint(
+            "source_name", "external_id", "content_hash", name="uq_raw_jobs_source_revision"
+        ),
+    )
 
     raw_job_id: Mapped[UUID] = mapped_column(primary_key=True)
     source_name: Mapped[str] = mapped_column(String(128))
@@ -107,7 +112,9 @@ class JobProfileRecord(Base):
     analysed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     snapshot: Mapped[dict] = mapped_column(JSON_DOCUMENT)
 
-    __table_args__ = __table_args__ + (UniqueConstraint("job_id", "revision", name="uq_job_profile_revision"),)
+    __table_args__ = __table_args__ + (
+        UniqueConstraint("job_id", "revision", name="uq_job_profile_revision"),
+    )
 
 
 class AssessmentRecord(Base):
@@ -119,3 +126,17 @@ class AssessmentRecord(Base):
     assessment_type: Mapped[str] = mapped_column(String(16))
     assessed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     snapshot: Mapped[dict] = mapped_column(JSON_DOCUMENT)
+
+
+class SourceHealthRecord(Base):
+    """One immutable observation for a connector run."""
+
+    __tablename__ = "source_health"
+
+    source_health_id: Mapped[UUID] = mapped_column(primary_key=True)
+    source_name: Mapped[str] = mapped_column(String(128), index=True)
+    status: Mapped[str] = mapped_column(String(16))
+    observed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    item_count: Mapped[int] = mapped_column()
+    latency_ms: Mapped[int] = mapped_column()
+    error_code: Mapped[str | None] = mapped_column(String(128), nullable=True)
