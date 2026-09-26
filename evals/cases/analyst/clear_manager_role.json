@@ -1,0 +1,6 @@
+{
+  "case_id": "clear-manager-role-v1",
+  "expected_fact_paths": ["/role_family", "/seniority", "/work_model"],
+  "required_source_ids": ["raw-job-001"],
+  "forbidden_inferred_paths": ["/compensation"]
+}

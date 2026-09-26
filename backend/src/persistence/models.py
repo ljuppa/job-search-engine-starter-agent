@@ -71,3 +71,40 @@ class ProfileChangeProposalRecord(Base):
     status: Mapped[str] = mapped_column(String(32), index=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     resolved_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+
+class RawJobRecord(Base):
+    __tablename__ = "raw_jobs"
+
+    raw_job_id: Mapped[UUID] = mapped_column(primary_key=True)
+    source_name: Mapped[str] = mapped_column(String(128))
+    external_id: Mapped[str] = mapped_column(String(256))
+    source_url: Mapped[str] = mapped_column(Text)
+    retrieved_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    content_hash: Mapped[str] = mapped_column(String(256), index=True)
+    snapshot: Mapped[dict] = mapped_column(JSON_DOCUMENT)
+
+
+class JobRecord(Base):
+    __tablename__ = "jobs"
+
+    job_id: Mapped[UUID] = mapped_column(primary_key=True)
+    canonical_key: Mapped[str] = mapped_column(String(512), unique=True)
+    snapshot: Mapped[dict] = mapped_column(JSON_DOCUMENT)
+
+
+class JobProfileRecord(Base):
+    __tablename__ = "job_profile_revisions"
+    __table_args__ = (
+        ForeignKeyConstraint(["job_id"], ["jobs.job_id"]),
+        ForeignKeyConstraint(["raw_job_id"], ["raw_jobs.raw_job_id"]),
+    )
+
+    job_profile_id: Mapped[UUID] = mapped_column(primary_key=True)
+    job_id: Mapped[UUID] = mapped_column(index=True)
+    revision: Mapped[int] = mapped_column()
+    raw_job_id: Mapped[UUID] = mapped_column()
+    analysed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    snapshot: Mapped[dict] = mapped_column(JSON_DOCUMENT)
+
+    __table_args__ = __table_args__ + (UniqueConstraint("job_id", "revision", name="uq_job_profile_revision"),)

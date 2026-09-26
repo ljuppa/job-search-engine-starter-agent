@@ -1,0 +1,6 @@
+{
+  "case_id": "missing-compensation-v1",
+  "expected_fact_paths": ["/requirements"],
+  "required_source_ids": ["raw-job-002"],
+  "forbidden_inferred_paths": ["/compensation", "/location"]
+}

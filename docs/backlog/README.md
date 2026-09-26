@@ -10,7 +10,7 @@ backlog before implementation begins. A story moves through `Not started`,
 | M1 — Domain contracts | Done | Versioned Pydantic contracts, examples and contract tests | [M1 domain contracts](m1-domain-contracts.md) |
 | M2 — LLM Gateway | Done | Gateway, provider adapter and telemetry | [M2 LLM Gateway](m2-llm-gateway.md) |
 | M3 — Profiler | Done | Profile extraction, proposals and profiler evals | [M3 Profiler](m3-profiler.md) |
-| M4 — Analyst | Not started | Raw-job normalization and analyst evals | To be planned before work begins |
+| M4 — Analyst | Done | Raw-job normalization and analyst evals | [M4 Analyst](m4-analyst.md) |
 | M5 — Matcher | Not started | Fit assessment and deterministic constraints | To be planned before work begins |
 | M6 — Strategist | Not started | Career assessment | To be planned before work begins |
 | M7 — Scout | Not started | Connectors, ingestion and deduplication | To be planned before work begins |

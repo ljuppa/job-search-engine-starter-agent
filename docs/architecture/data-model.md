@@ -81,3 +81,10 @@ and reference the exact profile revision they support or propose changing.
 Accepting a proposal creates a new profile revision. The prior snapshot remains
 unchanged, and the proposal is marked `USER_ACCEPTED`; no confirmed profile is
 updated in place.
+
+## M4 job-analysis persistence
+
+Raw jobs and canonical jobs are global immutable JSONB snapshots. A derived
+JobProfile is a separate versioned snapshot linked to both the canonical Job
+and the exact RawJob analysed. This keeps source content separate from derived
+job intelligence and allows later user-specific agents to reuse one analysis.

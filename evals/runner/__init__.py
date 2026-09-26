@@ -4,9 +4,9 @@ from .profiler import load_cases
 
 
 def main() -> None:
-    case_directory = Path(__file__).parents[1] / "cases" / "profiler"
-    cases = load_cases(case_directory)
-    print(f"Loaded {len(cases)} versioned Profiler evaluation cases.")
+    profiler_cases = load_cases(Path(__file__).parents[1] / "cases" / "profiler")
+    analyst_cases = load_cases(Path(__file__).parents[1] / "cases" / "analyst")
+    print(f"Loaded {len(profiler_cases)} Profiler and {len(analyst_cases)} Analyst evaluation cases.")
 
 if __name__ == "__main__":
     main()
