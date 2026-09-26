@@ -1,0 +1,1 @@
+{"case_id":"strong-fit-poor-move-v1","expected_fact_paths":["/risks"],"required_source_ids":["profile-001"],"forbidden_inferred_paths":["/market_portability"]}

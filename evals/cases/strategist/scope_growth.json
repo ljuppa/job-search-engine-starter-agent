@@ -1,0 +1,1 @@
+{"case_id":"scope-growth-v1","expected_fact_paths":["/opportunities"],"required_source_ids":["job-002"],"forbidden_inferred_paths":["/industry"]}
