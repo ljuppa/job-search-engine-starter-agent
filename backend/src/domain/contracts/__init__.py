@@ -25,6 +25,7 @@ from .decision import (
 )
 from .execution import ExecutionContext, ExecutionScope
 from .job import Job, JobCompensation, JobProfile, RawJob
+from .orchestration import AgentRun, QueueStatus, RunStatus, Usage, WorkflowRun, WorkflowTask
 from .profile import (
     CandidateProfile,
     CompensationPreferences,
@@ -41,6 +42,7 @@ from .proposal import ProfileChangeProposal, ProposalOperation, ProposalStatus
 
 __all__ = [
     "CONTRACT_SCHEMA_VERSION",
+    "AgentRun",
     "Assessment",
     "AssessmentScore",
     "AssessmentType",
@@ -64,12 +66,15 @@ __all__ = [
     "ProfileStatus",
     "ProposalOperation",
     "ProposalStatus",
+    "QueueStatus",
     "RawJob",
     "Recommendation",
     "RecommendationClassification",
+    "RunStatus",
     "SchemaVersion",
     "SearchPosture",
     "StableId",
+    "Usage",
     "UserFeedback",
     "UserId",
     "UserScopedContract",
@@ -78,4 +83,6 @@ __all__ = [
     "VersionedContract",
     "WorkModel",
     "WorkModelPreferences",
+    "WorkflowRun",
+    "WorkflowTask",
 ]

@@ -88,3 +88,14 @@ Raw jobs and canonical jobs are global immutable JSONB snapshots. A derived
 JobProfile is a separate versioned snapshot linked to both the canonical Job
 and the exact RawJob analysed. This keeps source content separate from derived
 job intelligence and allows later user-specific agents to reuse one analysis.
+
+## M8 orchestration audit persistence
+
+Workflow state is append-only: each state transition creates a new immutable
+`WorkflowRun` revision with the same workflow ID. The first revision is
+`PENDING`; only explicit orchestration may move it to `RUNNING` and then one
+terminal state. `AgentRun` records are immutable terminal execution records
+linked to their workflow ID. Both preserve correlation/trace attribution and
+the model, prompt, schema, input/output, latency, usage and error metadata
+needed to reproduce or diagnose work without giving agents authority to call
+one another.

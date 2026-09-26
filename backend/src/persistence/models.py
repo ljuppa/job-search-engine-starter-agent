@@ -140,3 +140,44 @@ class SourceHealthRecord(Base):
     item_count: Mapped[int] = mapped_column()
     latency_ms: Mapped[int] = mapped_column()
     error_code: Mapped[str | None] = mapped_column(String(128), nullable=True)
+
+
+class WorkflowRunRecord(Base):
+    __tablename__ = "workflow_run_revisions"
+
+    workflow_run_id: Mapped[UUID] = mapped_column(primary_key=True)
+    revision: Mapped[int] = mapped_column(primary_key=True)
+    workflow_name: Mapped[str] = mapped_column(String(128), index=True)
+    correlation_id: Mapped[UUID] = mapped_column(index=True)
+    trace_id: Mapped[UUID] = mapped_column(index=True)
+    scope: Mapped[str] = mapped_column(String(16))
+    user_id: Mapped[UUID | None] = mapped_column(index=True, nullable=True)
+    status: Mapped[str] = mapped_column(String(16), index=True)
+    recorded_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    snapshot: Mapped[dict] = mapped_column(JSON_DOCUMENT)
+
+
+class AgentRunRecord(Base):
+    __tablename__ = "agent_runs"
+
+    agent_run_id: Mapped[UUID] = mapped_column(primary_key=True)
+    workflow_run_id: Mapped[UUID] = mapped_column(index=True)
+    agent_name: Mapped[str] = mapped_column(String(128), index=True)
+    status: Mapped[str] = mapped_column(String(16), index=True)
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    completed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    snapshot: Mapped[dict] = mapped_column(JSON_DOCUMENT)
+
+
+class WorkflowTaskRecord(Base):
+    __tablename__ = "workflow_tasks"
+
+    task_id: Mapped[UUID] = mapped_column(primary_key=True)
+    workflow_run_id: Mapped[UUID] = mapped_column(index=True)
+    workflow_name: Mapped[str] = mapped_column(String(128), index=True)
+    status: Mapped[str] = mapped_column(String(16), index=True)
+    attempt_count: Mapped[int] = mapped_column()
+    max_attempts: Mapped[int] = mapped_column()
+    available_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
+    error_code: Mapped[str | None] = mapped_column(String(128), nullable=True)
+    payload: Mapped[dict] = mapped_column(JSON_DOCUMENT)

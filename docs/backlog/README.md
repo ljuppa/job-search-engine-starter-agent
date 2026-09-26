@@ -14,7 +14,7 @@ backlog before implementation begins. A story moves through `Not started`,
 | M5 — Matcher | Done | Fit assessment and deterministic constraints | [M5 Matcher](m5-matcher.md) |
 | M6 — Strategist | Done | Career assessment | [M6 Strategist](m6-strategist.md) |
 | M7 — Scout | Done | Greenhouse connector, ingestion and deduplication | [M7 Scout](m7-scout.md) |
-| M8 — Orchestrated pipeline | Not started | Queue, workflows, runs and ranking | To be planned before work begins |
+| M8 — Orchestrated pipeline | Done | Queue, workflows, runs and ranking | [M8 pipeline](m8-orchestrated-pipeline.md) |
 | M9 — Basic UI | Not started | Onboarding, shortlist and feedback surfaces | To be planned before work begins |
 | M10 — Deployment | Not started | Managed environments and release flow | To be planned before work begins |
 | M11 — Real-world evaluation | Not started | Live-market measurement and findings | To be planned before work begins |
