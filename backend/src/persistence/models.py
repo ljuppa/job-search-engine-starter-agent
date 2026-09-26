@@ -108,3 +108,14 @@ class JobProfileRecord(Base):
     snapshot: Mapped[dict] = mapped_column(JSON_DOCUMENT)
 
     __table_args__ = __table_args__ + (UniqueConstraint("job_id", "revision", name="uq_job_profile_revision"),)
+
+
+class AssessmentRecord(Base):
+    __tablename__ = "assessments"
+
+    assessment_id: Mapped[UUID] = mapped_column(primary_key=True)
+    user_id: Mapped[UUID] = mapped_column(index=True)
+    job_id: Mapped[UUID] = mapped_column(index=True)
+    assessment_type: Mapped[str] = mapped_column(String(16))
+    assessed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    snapshot: Mapped[dict] = mapped_column(JSON_DOCUMENT)

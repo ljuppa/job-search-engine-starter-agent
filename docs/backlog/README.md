@@ -11,7 +11,7 @@ backlog before implementation begins. A story moves through `Not started`,
 | M2 — LLM Gateway | Done | Gateway, provider adapter and telemetry | [M2 LLM Gateway](m2-llm-gateway.md) |
 | M3 — Profiler | Done | Profile extraction, proposals and profiler evals | [M3 Profiler](m3-profiler.md) |
 | M4 — Analyst | Done | Raw-job normalization and analyst evals | [M4 Analyst](m4-analyst.md) |
-| M5 — Matcher | Not started | Fit assessment and deterministic constraints | To be planned before work begins |
+| M5 — Matcher | Done | Fit assessment and deterministic constraints | [M5 Matcher](m5-matcher.md) |
 | M6 — Strategist | Not started | Career assessment | To be planned before work begins |
 | M7 — Scout | Not started | Connectors, ingestion and deduplication | To be planned before work begins |
 | M8 — Orchestrated pipeline | Not started | Queue, workflows, runs and ranking | To be planned before work begins |

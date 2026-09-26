@@ -1,0 +1,6 @@
+{
+  "case_id": "work-model-exclusion-v1",
+  "expected_fact_paths": ["/work_model"],
+  "required_source_ids": ["candidate-profile-001"],
+  "forbidden_inferred_paths": ["/compensation"]
+}

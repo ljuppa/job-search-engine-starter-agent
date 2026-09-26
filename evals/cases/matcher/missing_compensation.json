@@ -1,0 +1,6 @@
+{
+  "case_id": "missing-compensation-risk-v1",
+  "expected_fact_paths": ["/requirements"],
+  "required_source_ids": ["job-profile-002"],
+  "forbidden_inferred_paths": ["/compensation"]
+}
